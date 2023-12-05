@@ -3,7 +3,7 @@ fn main() {
     let mut total = 0;
     let letters: Vec<char> = ('a'..='z').collect();
        
-    for line in fs::read_to_string("test.txt").unwrap().lines(){
+    for line in fs::read_to_string("input.txt").unwrap().lines(){
         println!("{line}");
         
         let ints = replace_spelling_with_ints(&line).replace(&*letters,"");
@@ -20,15 +20,15 @@ fn main() {
 
 fn replace_spelling_with_ints (input : &str) -> String {
     let  response  = &input
-        .replace("one", "1")
-        .replace("two", "2")
-        .replace("three", "3")
-        .replace("four", "4")
-        .replace("five", "5")
-        .replace("six", "6")
-        .replace("seven", "7")
-        .replace("eight", "8")
-        .replace("nine", "9");
+        .replace("one", "one1one")
+        .replace("two", "two2two")
+        .replace("three", "three3three")
+        .replace("four", "four4four")
+        .replace("five", "five5five")
+        .replace("six", "six6six")
+        .replace("seven", "seven7seven")
+        .replace("eight", "eight8eight")
+        .replace("nine", "nine9nine");
     println!("{response}");
     return response.to_string();
 }
